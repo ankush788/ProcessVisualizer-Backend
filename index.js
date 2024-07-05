@@ -4,6 +4,7 @@ const fcfsRouter = require("./Routes/fcfsRoute");
 const sjfRouter = require("./Routes/sjfRoute");
 const roundRobinRouter = require("./Routes/rrRoute");
 const priorityRouter = require("./Routes/priorityRoute");  //  priority low to high 
+const FRONTEND_URL = require("./urlConfig");
 //  const connectToDatabase = require("./Config/database");
 //  connectToDatabase();
 
