@@ -20,7 +20,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
-const port = process.env.PORT || 5000;
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -35,6 +35,7 @@ app.get((req, res) => {
   res.status(404).send("Wrong path");
 })
 
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });
