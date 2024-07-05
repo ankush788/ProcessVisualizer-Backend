@@ -14,7 +14,7 @@ app.use(cors());
 const port = process.env.PORT || 5000;
 app.use(express.json());
 
-app.set("trust proxy", 1);
+// app.set("trust proxy", 1);
 // app.use(
 //   cors({
 //     origin: `${FRONTEND_URL}`,
