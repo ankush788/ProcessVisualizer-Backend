@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://your-client-domain.com', // Replace with your client's domain
+  origin: 'https://process-visualizer-frontend.vercel.app', // Replace with your client's domain
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Enable if you need to send cookies or HTTP authentication
   allowedHeaders: 'Content-Type, Authorization'
