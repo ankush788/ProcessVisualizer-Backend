@@ -8,7 +8,17 @@ const priorityRouter = require("./Routes/priorityRoute");  //  priority low to h
 //  connectToDatabase();
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.set("trust proxy", 1);
+app.use(
+  cors({
+    origin: `${FRONTEND_URL}`,
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    exposedHeaders: ["Set-Cookie"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 const port = process.env.PORT || 5000;
 app.use(express.json());
 
@@ -20,7 +30,7 @@ app.use("/fcfs" , fcfsRouter);
 app.use("/sjf",  sjfRouter);
 app.use("/rr", roundRobinRouter);
 app.use("/priority", priorityRouter)
-app.use((req, res) => {
+app.get((req, res) => {
   res.status(404).send("Wrong path");
 })
 
