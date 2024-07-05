@@ -20,7 +20,6 @@ app.use(
     origin: `${FRONTEND_URL}`,
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
-    exposedHeaders: ["Set-Cookie"],
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
