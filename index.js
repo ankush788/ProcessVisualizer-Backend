@@ -19,7 +19,7 @@ app.set("trust proxy", 1);
 // Use specific CORS configuration
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin: "https://process-visualizer-frontend.vercel.app",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],
