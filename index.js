@@ -5,6 +5,7 @@ const sjfRouter = require("./Routes/sjfRoute");
 const roundRobinRouter = require("./Routes/rrRoute");
 const priorityRouter = require("./Routes/priorityRoute");  //  priority low to high 
 const algoCompareRouter = require("./Routes/algoCompareRoute"); // using this require both things in data timeQuantum , priority 
+const FRONTEND_URL = require("./urlConfig");
 //  const connectToDatabase = require("./Config/database");
 //  connectToDatabase();
 
