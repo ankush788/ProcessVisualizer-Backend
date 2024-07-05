@@ -37,7 +37,7 @@ app.use("/priority", priorityRouter);
 app.use("/compare", algoCompareRouter);
 
 app.use((req, res) => {
-  res.status(404).send("Wrong path");
+  res.status(200).send("Wrong path");
 });
 
 app.listen(port, () => {
