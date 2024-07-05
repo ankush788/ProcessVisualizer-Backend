@@ -15,14 +15,14 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 
 app.set("trust proxy", 1);
-app.use(
-  cors({
-    origin: `${FRONTEND_URL}`,
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+// app.use(
+//   cors({
+//     origin: `${FRONTEND_URL}`,
+//     credentials: true,
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//   })
+// );
 
 app.get("/", (req, res) => {
   res.send("We are live ");
